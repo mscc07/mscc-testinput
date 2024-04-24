@@ -7,14 +7,10 @@
 #SBATCH --nodes=1
 #SBATCH --tasks-per-node=40
 #SBATCH --time=12:00:00
-#SBATCH --export=NONE
-#SBATCH --mail-type=NONE
-#SBATCH --no-requeue
+#SBATCH --reservation=mscc_workshop
 
-#module load ohpc
-#export AMD=/home/msccp23/amdkiit-main/source/build/amdkiit.x
-
+module load cdac/MSCC/amdkiit
 INPUT=input.yaml
 OUTPUT=amdkiit.out
 MYNP=1
-mpirun -n ${MYNP} $AMD $INPUT > $OUTPUT
+mpirun -n ${MYNP} amdkiit.x $INPUT > $OUTPUT
