@@ -6,23 +6,10 @@
 #SBATCH --nodes=1
 #SBATCH --tasks-per-node=48
 #SBATCH --time=00:15:00
-#SBATCH --export=NONE
-#SBATCH --mail-type=NONE
-#SBATCH --no-requeue
-
-
-
-module unload openmpi3/3.1.4
-module unload gnu8/8.3.0
-
-module load spack/0.17.1
-source /home/apps/spack/share/spack/setup-env.sh
-spack load intel-oneapi-compilers@2021.4.0
-spack load intel-oneapi-mkl@2023.2.0
-
-export AMD=/home/paramitag/amkdiit_intel/amdkiit-main/Github_upload_8jan24/source/build/amdkiit.x
+#SBATCH --reservation=mscc_workshop
+module load cdac/MSCC/amdkiit
 
 INPUT=input.yaml
-OUTPUT=${SLURM_JOB_NAME}.out
+OUTPUT=amdkiit.out
 MYNP=48
-mpirun -n ${MYNP} $AMD $INPUT > $OUTPUT
+mpirun -n ${MYNP} amdkiit.x $INPUT > $OUTPUT
