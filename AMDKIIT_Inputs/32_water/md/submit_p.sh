@@ -15,5 +15,5 @@ module load cdac/MSCC/amdkiit
 
 INPUT=input.yaml
 OUTPUT=amdkiit.out
-MYNP=48
+MYNP=1
 mpirun -n ${MYNP} amdkiit.x $INPUT > $OUTPUT
