@@ -8,6 +8,7 @@
 #SBATCH --tasks-per-node=48
 #SBATCH --time=00:15:00
 #SBATCH --exclusive=user
+#SBATCH --reservation=mscc_workshop
 
 export OMPI_MCA_mtl=psm2
 module load cdac/MSCC/amdkiit
