@@ -6,7 +6,7 @@
 #SBATCH --partition=hm
 #SBATCH --nodes=1
 #SBATCH --tasks-per-node=48
-#SBATCH --time=06:00:00
+#SBATCH --time=00:50:00
 #SBATCH --reservation=mscc_workshop
 
 module load cdac/MSCC/amdkiit
