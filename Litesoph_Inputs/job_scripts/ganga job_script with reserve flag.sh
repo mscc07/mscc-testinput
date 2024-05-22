@@ -8,4 +8,4 @@
 #SBATCH --reservation=MSCC_Workshop1
 
 ml MSCC/litesoph
-export PYTHONPATH=$PYTHONPATH:/home/apps/MSCC/lite/litesoph/lib/python3.10/site-packages
+
