@@ -9,5 +9,8 @@
 #SBATCH --partition=standard
 #SBATCH --reservation=mscc_workshop
 
+ml MSCC/litesoph
+
+export PYTHONPATH=$PYTHONPATH:/home/apps/MSCC/lite/litesoph/lib/python3.10/site-packages
 
 
